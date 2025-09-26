@@ -7,7 +7,34 @@ An LLM powered D&amp;D notetaking application, intended to integrate into discor
 2. Install golang from: https://go.dev/doc/install
 3. Setup python virtual env
     * `python -m venv .venv`
-    * `./.venv/Script/activate`
+
+### Bot Setup
+
+To setup your discord bot, go to https://discord.com/developers/applications and create a new application.
+
+Once created, go to the Bot tab and configure a bot, making sure to copy out the token.
+
+Scroll down to the intents and enable `PRESENCE INTENT` and `SERVER MEMBERS INTENT`.
+
+Lastly, use the following link and your application's client ID to add your bot to the server of your choice.
+
+https://discordapi.com/permissions.html#36508273664
+
+### Running locally
+
+To run `stt` the transcriber as a folder-watcher, run:
+1. `./.venv/Script/activate`
+2. `python .\stt\main.py -i $inputDir -o $outputDir`
+    * where `-i` is for the input directory to watch and;
+    * `-o` is the output directory to move audio and transcripts to
+
+To run `bot` the discord bot:
+1. `go run .\cmd\bot\ -t $discordToken -g $guildID -c $channelID -r $recordingDir -o $outputDir`
+    * where `-t` is the token of your discord bot
+    * `-g` is the ID of the server to connect to
+    * `-c` is the ID of the voice channel to join
+    * `-r` is the recording directory to store in-progress audio samples
+    * `-o` is the output directory to move finalised audio samples to
 
 ### Why "gemon"?
 
