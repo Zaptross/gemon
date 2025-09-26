@@ -1,6 +1,7 @@
 # TODOs and Notes
 
 ## TODO
+* setup discord slash command to start / stop recording, and specify which channel to join
 * setup concatenating transcriptions
     * concatenate by timestamp with users name included
 * setup summarization after concatenation
