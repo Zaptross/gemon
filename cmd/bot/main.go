@@ -1,3 +1,7 @@
+// First version originally written by wass88
+// Retrieved from: https://github.com/bwmarrin/discordgo/blob/master/examples/voice_receive/main.go
+// Retrieved on: 2025-09-25
+
 package main
 
 import (
